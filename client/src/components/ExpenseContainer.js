@@ -1,5 +1,15 @@
 import React from "react";
 import ExpenseDetails from "./ExpenseDetails";
+import { styled } from "@mui/material/styles";
+import {
+  Table,
+  TableBody,
+  TableContainer,
+  TableHead,
+  TableRow,
+  Paper,
+} from "@mui/material";
+import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
 /*
   expense categories: housing, healthcare/medical, entertainment, transportation,
@@ -41,7 +51,23 @@ const ExpenseContainer = () => {
       <ExpenseDetails key={expense.id} expense={expense} />
     ));
 
-  return <>{renderExpenses()}</>;
+  return (
+    <>
+      <>
+        <TableContainer component={Paper}>
+          <Table sx={{ minWidth: 100 }} aria-label="customized table">
+            <TableHead>
+              <TableRow>
+                <TableCell id="expenseTableHeader">EXPENSES</TableCell>
+              </TableRow>
+            </TableHead>
+          </Table>
+        </TableContainer>
+      </>
+
+      {renderExpenses()}
+    </>
+  );
 };
 
 export default ExpenseContainer;
