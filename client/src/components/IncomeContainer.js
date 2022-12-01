@@ -44,7 +44,7 @@ const renderIncome = () =>{
         <Table sx={{ minWidth: 100 }} aria-label="customized table">
           <TableHead>
             <TableRow>
-              <TableCell id="incomeTableHeader">EXPENSES</TableCell>
+              <TableCell id="incomeTableHeader">INCOME</TableCell>
             </TableRow>
           </TableHead>
         </Table>
