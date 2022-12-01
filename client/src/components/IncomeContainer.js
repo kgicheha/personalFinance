@@ -8,8 +8,8 @@ import {
   TableHead,
   TableRow,
   Paper,
+  TableCell
 } from "@mui/material";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
 /*
 catergory: salary, investments
@@ -19,38 +19,38 @@ const IncomeContainer = () => {
     {
       id: 1,
       description: "Salary",
-      amount: 5000.0,
+      amount: 5000.00,
       category: "salary",
       recurring: true,
     },
     {
       id: 2,
-      description: "Salary",
-      amount: 300.0,
+      description: "Dividends",
+      amount: 300.00,
       category: "investments",
       recurring: true,
     },
   ];
 
-  const renderIncome = () => {
-    income.map((inc) => <IncomeDetails key={inc.id} inc={inc} />)
-  };
+  const renderIncome = () =>
+    income.map((inc) => (
+      <IncomeDetails key={inc.id} inc={inc} />
+    ));
   return (
-    <>
       <>
         <TableContainer component={Paper}>
           <Table sx={{ minWidth: 100 }} aria-label="customized table">
             <TableHead>
               <TableRow>
                 <TableCell id="incomeTableHeader">INCOME</TableCell>
+                <TableCell id="incomeTableHeader"></TableCell>
               </TableRow>
             </TableHead>
+            <TableBody>{renderIncome()}</TableBody>
           </Table>
         </TableContainer>
       </>
 
-      {renderIncome()}
-    </>
   );
 };
 

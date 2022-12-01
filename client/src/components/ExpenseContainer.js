@@ -8,9 +8,8 @@ import {
   TableHead,
   TableRow,
   Paper,
-  Typography,
+  TableCell
 } from "@mui/material";
-import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
 /*
   expense categories: housing, healthcare/medical, entertainment, transportation,

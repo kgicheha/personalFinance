@@ -1,13 +1,6 @@
 import React from "react";
 import { styled } from "@mui/material/styles";
-import {
-  Table,
-  TableBody,
-  TableContainer,
-  TableHead,
-  TableRow,
-  Paper,
-} from "@mui/material";
+import { TableRow } from "@mui/material";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
 const ExpenseDetails = ({ expense }) => {

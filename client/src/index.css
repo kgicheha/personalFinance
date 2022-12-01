@@ -18,6 +18,9 @@ code {
   font-weight: bold
 
 }
+#incomeAmount{
+  color: #28b9b5;
+}
 
 /* EXPENSE SECTION */
 #expenseTableHeader{
