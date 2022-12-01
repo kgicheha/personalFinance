@@ -12,10 +12,18 @@ code {
     monospace;
 }
 
+/* INCOME SECTION */
+#incomeTableHeader{
+  color: #28b9b5;
+  font-weight: bold
+
+}
+
 /* EXPENSE SECTION */
 #expenseTableHeader{
-  color: #ff5049
+  color: #ff5049;
+  font-weight: bold
 }
 #expenseAmount{
-  color: #ff5049
+  color: #ff5049;
 }
