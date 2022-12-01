@@ -8,6 +8,7 @@ import {
   TableHead,
   TableRow,
   Paper,
+  Typography,
 } from "@mui/material";
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
@@ -23,7 +24,7 @@ const ExpenseContainer = () => {
     {
       id: 1,
       description: "Rent",
-      amount: 1000.00,
+      amount: 1000.0,
       category: "housing",
       recurring: true,
       frequency: "monthly",
@@ -31,7 +32,7 @@ const ExpenseContainer = () => {
     {
       id: 2,
       description: "Phone Bill",
-      amount: 55.00,
+      amount: 55.0,
       category: "utilities",
       recurring: true,
       frequency: "monthly",
@@ -39,7 +40,7 @@ const ExpenseContainer = () => {
     {
       id: 3,
       description: "Gas",
-      amount: 40.00,
+      amount: 40.0,
       category: "transportation",
       recurring: true,
       frequency: "weekly",
@@ -53,19 +54,17 @@ const ExpenseContainer = () => {
 
   return (
     <>
-      <>
-        <TableContainer component={Paper}>
-          <Table sx={{ minWidth: 100 }} aria-label="customized table">
-            <TableHead>
-              <TableRow>
-                <TableCell id="expenseTableHeader">EXPENSES</TableCell>
-              </TableRow>
-            </TableHead>
-          </Table>
-        </TableContainer>
-      </>
-
-      {renderExpenses()}
+      <TableContainer component={Paper}>
+        <Table sx={{ minWidth: 100 }} aria-label="customized table">
+          <TableHead>
+            <TableRow>
+              <TableCell id="expenseTableHeader">EXPENSES</TableCell>
+              <TableCell></TableCell>
+            </TableRow>
+          </TableHead>
+          <TableBody>{renderExpenses()}</TableBody>
+        </Table>
+      </TableContainer>
     </>
   );
 };

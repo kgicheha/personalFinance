@@ -11,19 +11,18 @@ import {
 import TableCell, { tableCellClasses } from "@mui/material/TableCell";
 
 const ExpenseDetails = ({ expense }) => {
-
-    const {id, description, amount, category, recurring, frequency} = expense
+  const { id, description, amount, category, recurring, frequency } = expense;
   return (
-    <div>
-      <TableBody>
-          <TableRow key={id}>
-            <TableCell component="th" scope="row">
-              {description}
-            </TableCell>
-            <TableCell id="expenseAmount" align="right">-{amount.toLocaleString("en-US", {minimumFractionDigits: 2})}</TableCell>
-          </TableRow>
-      </TableBody>
-    </div>
+    <>
+      <TableRow key={id}>
+        <TableCell component="th" scope="row">
+          {description}
+        </TableCell>
+        <TableCell id="expenseAmount" align="right">
+          -{amount.toLocaleString("en-US", { minimumFractionDigits: 2 })}
+        </TableCell>
+      </TableRow>
+    </>
   );
 };
 
