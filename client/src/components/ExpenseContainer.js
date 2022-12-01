@@ -23,7 +23,7 @@ const ExpenseContainer = () => {
     {
       id: 1,
       description: "Rent",
-      value: 1000,
+      amount: 1000.00,
       category: "housing",
       recurring: true,
       frequency: "monthly",
@@ -31,7 +31,7 @@ const ExpenseContainer = () => {
     {
       id: 2,
       description: "Phone Bill",
-      value: 55,
+      amount: 55.00,
       category: "utilities",
       recurring: true,
       frequency: "monthly",
@@ -39,7 +39,7 @@ const ExpenseContainer = () => {
     {
       id: 3,
       description: "Gas",
-      value: 40,
+      amount: 40.00,
       category: "transportation",
       recurring: true,
       frequency: "weekly",

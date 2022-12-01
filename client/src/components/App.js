@@ -1,12 +1,13 @@
 import "../App.css";
 import ExpenseContainer from "./ExpenseContainer";
+import IncomeContainer from "./IncomeContainer";
 
 
 function App() {
 
   return (
     <div className="App">
-      <h1>Hello King</h1>
+      <IncomeContainer/>
       <ExpenseContainer/>
     </div>
   );
