@@ -31,14 +31,18 @@ const NewInputContainer = () => {
       backgroundColor: "#1480e5",
     },
   });
+  const CustomContainer = styled(Container)({
+    padding: "1em",
+    backgroundColor: "#f6f6f6",
+  });
   // CUSTOM CSS ^^
   return (
     <>
-      <Container>
+      <CustomContainer >
         <form onSubmit={handleSubmit(onSubmit)}>
           <FormControl id="addType" sx={{ minWidth: 90 }}>
             <InputLabel>Select</InputLabel>
-            <Select label="Select" {...register("type")}>
+            <Select label="Select" id="inputType" {...register("type")}>
               <MenuItem id="income" value="positive">
                 +
               </MenuItem>
@@ -49,6 +53,7 @@ const NewInputContainer = () => {
           </FormControl>
           <FormControl id="addDescription" sx={{ maxWidth: 200 }}>
             <TextField
+              id="descriptionInput"
               placeholder="add description"
               variant="outlined"
               {...register("description")}
@@ -56,6 +61,7 @@ const NewInputContainer = () => {
           </FormControl>
           <FormControl id="addValue" sx={{ maxWidth: 120 }}>
             <TextField
+            id="amountInput"
               placeholder="amount"
               type="number"
               variant="outlined"
@@ -66,7 +72,7 @@ const NewInputContainer = () => {
             Submit
           </CustomButton>
         </form>
-      </Container>
+      </CustomContainer>
     </>
   );
 };

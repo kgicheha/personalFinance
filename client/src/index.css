@@ -1,53 +1,61 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 /* INPUT SECTION  */
-#income{
-  font-weight: bold
-}
-#expense{
-  font-weight: bold
-}
-#addType{
+#addType {
   padding-right: 0.8em;
 }
-#addDescription{
+#inputType {
+  background-color: white;
+}
+#income {
+  font-weight: bold;
+}
+#expense {
+  font-weight: bold;
+}
+#addDescription {
   padding-right: 0.8em;
 }
-#addValue{
+#descriptionInput {
+  background-color: white;
+}
+#addValue {
   padding-right: 0.8em;
 }
-#submitButton{
-line-height: 2.5;
-/* width: 3em; */
+#amountInput {
+  background-color: white;
+}
+#submitButton {
+  line-height: 2.5;
+  /* width: 3em; */
 }
 
 /* INCOME SECTION */
-#incomeTableHeader{
+#incomeTableHeader {
   color: #28b9b5;
-  font-weight: bold
-
+  font-weight: bold;
 }
-#incomeAmount{
+#incomeAmount {
   color: #28b9b5;
 }
 
 /* EXPENSE SECTION */
-#expenseTableHeader{
+#expenseTableHeader {
   color: #ff5049;
-  font-weight: bold
+  font-weight: bold;
 }
-#expenseAmount{
+#expenseAmount {
   color: #ff5049;
 }
