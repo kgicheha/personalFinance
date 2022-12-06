@@ -12,6 +12,20 @@ code {
     monospace;
 }
 
+/* INPUT SECTION  */
+#income{
+  font-weight: bold
+}
+#expense{
+  font-weight: bold
+}
+/* #addDescription{
+  float: left;
+}
+#addValue{
+  float: left;
+} */
+
 /* INCOME SECTION */
 #incomeTableHeader{
   color: #28b9b5;

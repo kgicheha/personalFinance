@@ -14,14 +14,11 @@ const NewInputContainer = () => {
     console.log("Hello");
   };
   return (
-    <Box sx={{ minWidth: 120 }}>
-      <FormControl
-      // fullWidth
-      >
-        <InputLabel>Select</InputLabel>
-        <Select onChange={handleChange}>
-          <MenuItem>+</MenuItem>
-          <MenuItem>-</MenuItem>
+      <FormControl>
+      <InputLabel>Select</InputLabel>
+        <Select label="Select" onChange={handleChange}>
+          <MenuItem id="income">+</MenuItem>
+          <MenuItem id="expense">-</MenuItem>
         </Select>
         <Input
           id="addDescription"
@@ -34,7 +31,6 @@ const NewInputContainer = () => {
           type="number"
         />
       </FormControl>
-    </Box>
   );
 };
 
