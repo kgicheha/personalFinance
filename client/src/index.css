@@ -19,12 +19,16 @@ code {
 #expense{
   font-weight: bold
 }
-/* #addDescription{
+#addType{
+  float: left;
+  width: 20%;
+}
+#addDescription{
   float: left;
 }
 #addValue{
-  float: left;
-} */
+  float: right;
+}
 
 /* INCOME SECTION */
 #incomeTableHeader{
