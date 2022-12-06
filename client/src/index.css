@@ -20,14 +20,14 @@ code {
   font-weight: bold
 }
 #addType{
-  float: left;
-  width: 20%;
+  /* float: left; */
+  /* width: 25%; */
 }
 #addDescription{
-  float: left;
+  /* float: left; */
 }
 #addValue{
-  float: right;
+  /* float: right; */
 }
 
 /* INCOME SECTION */

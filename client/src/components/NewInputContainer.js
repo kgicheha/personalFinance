@@ -22,35 +22,37 @@ const NewInputContainer = () => {
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <InputLabel>Select</InputLabel>
-      <Select
-        id="addType"
-        label="Select"
-        {...register("type")}
-        onChange={handleChange}
-      >
-        <MenuItem id="income" value="positive">
-          +
-        </MenuItem>
-        <MenuItem id="expense" value="negative">
-          -
-        </MenuItem>
-      </Select>
-      <div id="addDescription">
+      <FormControl>
+        <InputLabel>Select</InputLabel>
+        <Select
+          id="addType"
+          label="Select"
+          {...register("type")}
+          onChange={handleChange}
+        >
+          <MenuItem id="income" value="positive">
+            +
+          </MenuItem>
+          <MenuItem id="expense" value="negative">
+            -
+          </MenuItem>
+        </Select>
+      </FormControl>
+      <FormControl id="addDescription">
         <TextField
           placeholder="Add description"
           variant="outlined"
           {...register("description")}
         />
-      </div>
-      <div id="addValue">
-        <Input
+      </FormControl>
+      <FormControl id="addValue">
+        <TextField
           placeholder="amount"
           type="number"
           variant="outlined"
           {...register("amount")}
         />
-      </div>
+      </FormControl>
     </form>
   );
 };
