@@ -21,15 +21,15 @@ code {
 }
 #addType{
   padding-right: 0.8em;
-  /* float: left; */
-  /* width: 25%; */
 }
 #addDescription{
   padding-right: 0.8em;
-  /* float: left; */
 }
 #addValue{
-  /* float: right; */
+  padding-right: 0.8em;
+}
+#submitButton{
+/* line-height: 100%; */
 }
 
 /* INCOME SECTION */
