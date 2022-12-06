@@ -22,7 +22,7 @@ const ExpenseDetails = ({ expense }) => {
           {description}
         </TableCell>
         <TableCell id="expenseAmount" align="right">
-          -{amount.toLocaleString("en-US", { minimumFractionDigits: 2 })}
+          - {amount.toLocaleString("en-US", { minimumFractionDigits: 2 })}
         </TableCell>
       </CustomTableRow>
     </>
