@@ -1,6 +1,5 @@
 import React from "react";
 import { styled } from "@mui/material";
-import { red } from "@mui/material/colors";
 import {
   InputLabel,
   MenuItem,
@@ -37,7 +36,7 @@ const NewInputContainer = () => {
     <>
       <Container>
         <form onSubmit={handleSubmit(onSubmit)}>
-          <FormControl id="addType" sx={{ minWidth: 120 }}>
+          <FormControl id="addType" sx={{ minWidth: 90 }}>
             <InputLabel>Select</InputLabel>
             <Select label="Select" {...register("type")}>
               <MenuItem id="income" value="positive">
@@ -48,14 +47,14 @@ const NewInputContainer = () => {
               </MenuItem>
             </Select>
           </FormControl>
-          <FormControl id="addDescription">
+          <FormControl id="addDescription" sx={{ maxWidth: 200 }}>
             <TextField
               placeholder="add description"
               variant="outlined"
               {...register("description")}
             />
           </FormControl>
-          <FormControl id="addValue">
+          <FormControl id="addValue" sx={{ maxWidth: 120 }}>
             <TextField
               placeholder="amount"
               type="number"

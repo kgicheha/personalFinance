@@ -1,6 +1,5 @@
 import React from "react";
 import ExpenseDetails from "./ExpenseDetails";
-import { styled } from "@mui/material/styles";
 import {
   Table,
   TableBody,

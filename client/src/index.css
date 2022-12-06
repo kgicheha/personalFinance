@@ -29,7 +29,8 @@ code {
   padding-right: 0.8em;
 }
 #submitButton{
-/* line-height: 100%; */
+line-height: 2.5;
+/* width: 3em; */
 }
 
 /* INCOME SECTION */
