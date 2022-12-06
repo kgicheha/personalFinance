@@ -9,7 +9,6 @@ const NewInputContainer = () => {
   return (
     <Box sx={{ minWidth: 120 }}>
     <FormControl fullWidth>
-      {/* <InputLabel id="type">Type</InputLabel> */}
       <Select
         labelId="demo-simple-select-label"
         id="demo-simple-select"
@@ -20,8 +19,8 @@ const NewInputContainer = () => {
         <MenuItem>-</MenuItem>
         <MenuItem>+</MenuItem>
       </Select>
-      <TextField id="addDescription" label="Add description" variant="outlined" />
-      <TextField id="addValue" label="value" variant="outlined" />
+      <TextField id="addDescription" placeholder="Add description" variant="outlined" />
+      <TextField id="addValue" placeholder="value" variant="outlined" />
     </FormControl>
   </Box>
   )
