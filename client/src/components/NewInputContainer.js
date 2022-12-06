@@ -17,9 +17,10 @@ const NewInputContainer = () => {
       <FormControl fullWidth>
         <Select
           onChange={handleChange}
-          displayEmpty
-          inputProps={{ "aria-label": "Without label" }}
+          label="Select"
+
         >
+
           <MenuItem>+</MenuItem>
           <MenuItem>-</MenuItem>
         </Select>
