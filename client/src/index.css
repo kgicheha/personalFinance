@@ -20,10 +20,12 @@ code {
   font-weight: bold
 }
 #addType{
+  padding-right: 0.8em;
   /* float: left; */
   /* width: 25%; */
 }
 #addDescription{
+  padding-right: 0.8em;
   /* float: left; */
 }
 #addValue{

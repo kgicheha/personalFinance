@@ -22,14 +22,9 @@ const NewInputContainer = () => {
   };
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      <FormControl>
+      <FormControl id="addType" sx={{ minWidth: 120 }}>
         <InputLabel>Select</InputLabel>
-        <Select
-          id="addType"
-          label="Select"
-          {...register("type")}
-          onChange={handleChange}
-        >
+        <Select label="Select" {...register("type")} onChange={handleChange}>
           <MenuItem id="income" value="positive">
             +
           </MenuItem>
