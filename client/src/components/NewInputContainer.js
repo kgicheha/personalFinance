@@ -6,6 +6,7 @@ import {
   FormControl,
   Select,
   TextField,
+  Input,
 } from "@mui/material";
 
 const NewInputContainer = () => {
@@ -14,22 +15,24 @@ const NewInputContainer = () => {
   };
   return (
     <Box sx={{ minWidth: 120 }}>
-      <FormControl fullWidth>
-        <Select
-          onChange={handleChange}
-          label="Select"
-
-        >
-
+      <FormControl
+      // fullWidth
+      >
+        <InputLabel>Select</InputLabel>
+        <Select onChange={handleChange}>
           <MenuItem>+</MenuItem>
           <MenuItem>-</MenuItem>
         </Select>
-        <TextField
+        <Input
           id="addDescription"
           placeholder="Add description"
-          variant="outlined"
+
         />
-        <TextField id="addValue" placeholder="value" variant="outlined" />
+        <Input
+          id="addValue"
+          placeholder="value"
+          type="number"
+        />
       </FormControl>
     </Box>
   );
