@@ -26,7 +26,7 @@ const NewInputContainer = () => {
         <Input
           id="addDescription"
           placeholder="Add description"
-
+          // sx={{size:"large"}}
         />
         <Input
           id="addValue"
