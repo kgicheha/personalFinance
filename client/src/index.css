@@ -15,6 +15,11 @@ code {
 #appBar{
   background-color: black;
 }
+#menuIconButton{
+  /* position: absolute; */
+  /* left: 23em; */
+
+}
 /* MENU BAR */
 #menuBar{
   background-color: white;

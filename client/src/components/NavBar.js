@@ -10,6 +10,7 @@ import {
   Button,
   MenuItem,
 } from "@mui/material";
+import { styled } from "@mui/material/styles";
 
 import MenuIcon from "@mui/icons-material/Menu";
 
@@ -34,11 +35,19 @@ const NavBar = () => {
     setAnchorElUser(null);
   };
 
+  // CUSTOM CSS
+  const CustomButton = styled(Button)({
+    "&:hover": {
+      textDecoration: "underline",
+      fontWeight: "bold",
+    },
+  });
+  //CUSTOM CSS
   return (
     <div>
       <AppBar position="static" id="appBar">
         <Container maxWidth="xl">
-          <Toolbar disableGutters>
+          <Toolbar>
             <img
               sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
               src="logo.png"
@@ -54,6 +63,7 @@ const NavBar = () => {
                 aria-haspopup="true"
                 onClick={handleOpenNavMenu}
                 color="inherit"
+                id="menuIconButton"
               >
                 <MenuIcon />
               </IconButton>
@@ -84,13 +94,13 @@ const NavBar = () => {
             </Box>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Button
+                <CustomButton
                   key={page}
                   onClick={handleCloseNavMenu}
                   sx={{ my: 2, color: "white", display: "block" }}
                 >
                   {page}
-                </Button>
+                </CustomButton>
               ))}
             </Box>
 

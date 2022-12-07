@@ -9,6 +9,7 @@ import {
   Container,
   Button,
   MenuItem,
+  Link,
 } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import { styled } from "@mui/material/styles";
@@ -17,6 +18,10 @@ const MenuBar = () => {
   const pages = ["OVERVIEW", "TRANSACTIONS", "GOALS", "BUDGETS"];
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
+
+  const handleMenuChange =(event) =>{
+    console.log(event.currentTarget)
+  }
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -45,9 +50,12 @@ const MenuBar = () => {
   //CUSTOM CSS
   return (
     <div>
-      <AppBar position="static" id="menuBar">
+      <AppBar position="relative" id="menuBar">
         <Container maxWidth="xl">
-          <Toolbar disableGutters>
+          <Toolbar>
+          <Link to="/home">
+
+          </Link>
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
@@ -78,7 +86,7 @@ const MenuBar = () => {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
+                  <MenuItem key={page} onClick={handleMenuChange}>
                     <Typography textAlign="center">{page}</Typography>
                   </MenuItem>
                 ))}
@@ -88,7 +96,7 @@ const MenuBar = () => {
               {pages.map((page) => (
                 <CustomButton
                   key={page}
-                  onClick={handleCloseNavMenu}
+                  onClick={handleMenuChange}
                   sx={{ my: 2, color: "black", display: "block" }}
                 >
                   {page}
