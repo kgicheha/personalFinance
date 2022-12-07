@@ -7,14 +7,11 @@ import {
   Typography,
   Menu,
   Container,
-  Avatar,
   Button,
-  Tooltip,
   MenuItem,
 } from "@mui/material";
-import AdbIcon from "@mui/icons-material/Adb";
+
 import MenuIcon from "@mui/icons-material/Menu";
-import { styled } from "@mui/material";
 
 const NavBar = () => {
   const pages = ["SETTINGS", "PROFILE", "LOG OUT"];
@@ -44,7 +41,7 @@ const NavBar = () => {
           <Toolbar disableGutters>
             <img
               sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-              src={require("../Assets/logo.png")}
+              src="logo.png"
               alt="Logo"
               height="50"
             />
