@@ -15,6 +15,10 @@ code {
 #appBar{
   background-color: black;
 }
+/* MENU BAR */
+#menuBar{
+  background-color: white;
+}
 /* BUDGET SUMMARY */
 #budgetSummary{
   padding-top: 1em;

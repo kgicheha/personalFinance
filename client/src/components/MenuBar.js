@@ -10,12 +10,11 @@ import {
   Button,
   MenuItem,
 } from "@mui/material";
-
 import MenuIcon from "@mui/icons-material/Menu";
+import { styled } from "@mui/material/styles";
 
-const NavBar = () => {
-  const pages = ["+ ADD TRANSACTION", "PROFILE", "LOG OUT"];
-
+const MenuBar = () => {
+  const pages = ["OVERVIEW", "TRANSACTIONS", "GOALS", "BUDGETS"];
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
 
@@ -34,18 +33,21 @@ const NavBar = () => {
     setAnchorElUser(null);
   };
 
+  // CUSTOM CSS
+  const CustomButton = styled(Button)({
+    "&:hover": {
+      textDecoration: "underline",
+      color:"#178fff",
+      backgroundColor: "#f6f6f6",
+      fontWeight: "bold",
+    },
+  });
+  //CUSTOM CSS
   return (
     <div>
-      <AppBar position="static" id="appBar">
+      <AppBar position="static" id="menuBar">
         <Container maxWidth="xl">
           <Toolbar disableGutters>
-            <img
-              sx={{ display: { xs: "none", md: "flex" }, mr: 1 }}
-              src="logo.png"
-              alt="Logo"
-              height="50"
-            />
-
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
               <IconButton
                 size="large"
@@ -84,13 +86,13 @@ const NavBar = () => {
             </Box>
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
-                <Button
+                <CustomButton
                   key={page}
                   onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
+                  sx={{ my: 2, color: "black", display: "block" }}
                 >
                   {page}
-                </Button>
+                </CustomButton>
               ))}
             </Box>
 
@@ -119,4 +121,4 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
+export default MenuBar;
