@@ -11,12 +11,24 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+/* NAV BAR */
+#appBar{
+  background-color: black;
+}
 /* BUDGET SUMMARY */
+#budgetSummary{
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
 #incomeSummary{
   background-color: #28b9b5;
 }
 #expenseSummary{
   background-color: #ff5049;
+}
+.summaryAmount{
+  color: white;
 }
 /* INPUT SECTION  */
 #addType {
