@@ -32,7 +32,9 @@ const NewInputContainer = () => {
     },
   });
   const CustomContainer = styled(Container)({
-    padding: "1em",
+    paddingBottom: "1em",
+    paddingTop: "1em",
+    // width: "100%",
     backgroundColor: "#f6f6f6",
   });
   // CUSTOM CSS ^^

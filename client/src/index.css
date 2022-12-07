@@ -11,7 +11,13 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
-
+/* BUDGET SUMMARY */
+#incomeSummary{
+  background-color: #28b9b5;
+}
+#expenseSummary{
+  background-color: #ff5049;
+}
 /* INPUT SECTION  */
 #addType {
   padding-right: 0.8em;
