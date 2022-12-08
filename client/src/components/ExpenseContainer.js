@@ -45,6 +45,7 @@ const ExpenseContainer = () => {
     },
   ];
 
+
   const renderExpenses = () =>
     expenses.map((expense) => (
       <ExpenseDetails key={expense.id} expense={expense} />

@@ -1,5 +1,5 @@
-import React from "react";
-import { styled } from "@mui/material";
+import React, { useState } from "react";
+import { styled, Typography } from "@mui/material";
 import {
   InputLabel,
   MenuItem,
@@ -7,16 +7,24 @@ import {
   Select,
   TextField,
   Button,
+  Checkbox,
 } from "@mui/material";
 import { useForm } from "react-hook-form";
 import { Container } from "@mui/system";
+import dayjs from 'dayjs';
+import { LocalizationProvider } from '@mui/x-date-pickers/LocalizationProvider';
+import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
+import { DesktopDatePicker } from '@mui/x-date-pickers/DesktopDatePicker';
 
 const NewInputContainer = () => {
   //storing data from the form
   const { register, handleSubmit } = useForm();
+  const [checked, setChecked] = useState(false);
+  const [value, setValue] = useState(dayjs('2014-08-18T21:11:54'));
 
-  const handleChange = () => {
-    console.log("Hello");
+  const handleChange = (event, newValue) => {
+    setChecked(event.target.checked);
+    setValue(newValue);
   };
   const onSubmit = (data) => {
     console.log(data);
@@ -37,11 +45,20 @@ const NewInputContainer = () => {
     // width: "100%",
     backgroundColor: "#f6f6f6",
   });
+
   // CUSTOM CSS ^^
   return (
     <>
-      <CustomContainer >
+      <CustomContainer>
         <form onSubmit={handleSubmit(onSubmit)}>
+          <FormControl id="recurring" sx={{ maxWidth: 120 }}>
+            <Checkbox
+              checked={checked}
+              onChange={handleChange}
+              inputProps={{ "aria-label": "controlled" }}
+            />
+            <Typography>recurring</Typography>
+          </FormControl>
           <FormControl id="addType" sx={{ minWidth: 90 }}>
             <InputLabel>Select</InputLabel>
             <Select label="Select" id="inputType" {...register("type")}>
@@ -63,14 +80,35 @@ const NewInputContainer = () => {
           </FormControl>
           <FormControl id="addValue" sx={{ maxWidth: 120 }}>
             <TextField
-            id="amountInput"
+              id="amountInput"
               placeholder="amount"
               type="number"
               variant="outlined"
               {...register("amount")}
             />
           </FormControl>
-          <CustomButton id="submitButton" type="submit" size="large" variant="contained">
+{
+  checked ?
+          <FormControl>
+          <LocalizationProvider dateAdapter={AdapterDayjs}>
+
+        <DesktopDatePicker
+          label="Date desktop"
+          inputFormat="MM/DD/YYYY"
+          value={value}
+          onChange={handleChange}
+          renderInput={(params) => <TextField {...params} />}
+        />
+         </LocalizationProvider>
+          </FormControl>
+          :null
+}
+          <CustomButton
+            id="submitButton"
+            type="submit"
+            size="large"
+            variant="contained"
+          >
             Submit
           </CustomButton>
         </form>
