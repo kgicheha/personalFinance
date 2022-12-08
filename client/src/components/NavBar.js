@@ -15,7 +15,7 @@ import { styled } from "@mui/material/styles";
 import MenuIcon from "@mui/icons-material/Menu";
 
 const NavBar = () => {
-  const pages = ["+ ADD TRANSACTION", "PROFILE", "LOG OUT"];
+  const pages = ["PROFILE", "LOG OUT"];
 
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [anchorElUser, setAnchorElUser] = useState(null);
