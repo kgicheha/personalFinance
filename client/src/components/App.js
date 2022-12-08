@@ -14,10 +14,6 @@ function App() {
       <div className="App">
         <NavBar />
         <MenuBar />
-        <BudgetSummary />
-        <NewInputContainer />
-        <IncomeContainer />
-        <ExpenseContainer />
       </div>
     </>
   );

@@ -1,7 +1,11 @@
 import React, { useState } from "react";
 import { Tab, Tabs, Box, Button } from "@mui/material";
-import {TabContext, TabList, TabPanel} from "@mui/lab";
+import { TabContext, TabList, TabPanel } from "@mui/lab";
 import { styled } from "@mui/material";
+import BudgetSummary from "./BudgetSummary";
+import NewInputContainer from "./NewInputContainer";
+import IncomeDetails from "./IncomeDetails";
+import ExpenseDetails from "./ExpenseDetails";
 
 const MenuBar = () => {
   const [value, setValue] = useState(0);
@@ -30,17 +34,28 @@ const MenuBar = () => {
       <Box sx={{ width: "100%", my: 2 }}>
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <TabList onChange={handleChange} aria-label="lab API tabs example" centered>
+            <TabList
+              onChange={handleChange}
+              aria-label="lab API tabs example"
+              centered
+            >
               <CustomTab value="OVERVIEW" label="OVERVIEW" />
               <CustomTab value="GOALS" label="GOALS" />
               <CustomTab value="TRANSACTIONS" label="TRANSACTIONS" />
               <CustomTab value="NEW TRANSACTION" label="NEW TRANSACTION" />
             </TabList>
           </Box>
-          <TabPanel value="OVERVIEW">OVERVIEW</TabPanel>
+          <TabPanel value="OVERVIEW">
+            <BudgetSummary />
+          </TabPanel>
           <TabPanel value="GOALS">GOALS</TabPanel>
-          <TabPanel value="TRANSACTIONS">TRANSACTIONS</TabPanel>
-          <TabPanel value="NEW TRANSACTION">NEW TRANSACTION</TabPanel>
+          <TabPanel value="TRANSACTIONS">
+            {/* <IncomeDetails /> */}
+            {/* <ExpenseDetails /> */}
+          </TabPanel>
+          <TabPanel value="NEW TRANSACTION">
+            <NewInputContainer />
+          </TabPanel>
         </TabContext>
       </Box>
 
