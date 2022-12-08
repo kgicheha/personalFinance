@@ -89,7 +89,7 @@ const NewInputContainer = () => {
           </FormControl>
 {
   checked ?
-          <FormControl>
+          <FormControl id="addDate">
           <LocalizationProvider dateAdapter={AdapterDayjs}>
 
         <DesktopDatePicker
@@ -98,6 +98,7 @@ const NewInputContainer = () => {
           value={value}
           onChange={handleChange}
           renderInput={(params) => <TextField {...params} />}
+          id="dateInput"
         />
          </LocalizationProvider>
           </FormControl>

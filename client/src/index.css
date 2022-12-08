@@ -64,6 +64,12 @@ code {
 #amountInput {
   background-color: white;
 }
+#addDate {
+  padding-right: 0.8em;
+}
+#dateInput{
+  background-color: white;
+}
 #submitButton {
   line-height: 2.6;
   /* width: 3em; */
