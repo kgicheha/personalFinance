@@ -37,7 +37,7 @@ const IncomeContainer = () => {
     ));
   return (
       <>
-        <TableContainer component={Paper}>
+        <TableContainer component={Paper} id="incomeDiv">
           <Table sx={{ minWidth: 100 }} aria-label="customized table">
             <TableHead>
               <TableRow>
