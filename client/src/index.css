@@ -24,6 +24,12 @@ code {
 #menuBar{
   background-color: white;
 }
+#transactionHistory{
+  display:flex;
+  flex-direction:row;
+}
+
+
 /* BUDGET SUMMARY */
 #budgetSummary{
   padding-top: 1em;

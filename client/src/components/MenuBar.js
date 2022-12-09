@@ -52,16 +52,16 @@ const MenuBar = () => {
           <TabPanel value="GOALS">GOALS</TabPanel>
           <TabPanel value="BILLS">BILLS</TabPanel>
           <TabPanel value="TRANSACTIONS">
-            <IncomeContainer />
-            <ExpenseContainer />
+            <div id="transactionHistory">
+              <IncomeContainer />
+              <ExpenseContainer />
+            </div>
           </TabPanel>
           <TabPanel value="NEW TRANSACTION">
             <NewInputContainer />
           </TabPanel>
         </TabContext>
       </Box>
-
-
     </div>
   );
 };
