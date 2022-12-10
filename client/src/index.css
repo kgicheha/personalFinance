@@ -40,7 +40,9 @@ code {
 }
 
 #incomeSummary{
-  background-color: #28b9b5;
+  font-weight: bold;
+  font-size: 18
+
 }
 #expenseSummary{
   background-color: #ff5049;

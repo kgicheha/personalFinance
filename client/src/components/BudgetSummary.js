@@ -1,11 +1,13 @@
 import React from "react";
 import { Typography, Container, Stack } from "@mui/material";
+import TotalIncome from "./TotalIncome";
 
 const BudgetSummary = () => {
   return (
     <>
       <Container id="budgetSummary">
-        <Stack>
+      <TotalIncome />
+        {/* <Stack>
           <Typography>Available Budget in December 2022</Typography>
           <Typography>+ 2000.00</Typography>
           <Container id="incomeSummary">
@@ -16,7 +18,7 @@ const BudgetSummary = () => {
             <Typography>EXPENSES</Typography>
             <Typography className="summaryAmount">- 3000.00</Typography>
           </Container>
-        </Stack>
+        </Stack> */}
       </Container>
     </>
   );

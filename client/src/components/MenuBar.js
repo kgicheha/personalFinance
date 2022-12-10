@@ -41,7 +41,7 @@ const MenuBar = () => {
             >
               <CustomTab value="OVERVIEW" label="OVERVIEW" />
               <CustomTab value="GOALS" label="GOALS" />
-              <CustomTab value="BILLS" label="BILLS" />
+              <CustomTab value="ANALYSIS" label="ANALYSIS" />
               <CustomTab value="TRANSACTIONS" label="TRANSACTIONS" />
               <CustomTab value="NEW TRANSACTION" label="NEW TRANSACTION" />
             </TabList>
@@ -50,7 +50,7 @@ const MenuBar = () => {
             <BudgetSummary />
           </TabPanel>
           <TabPanel value="GOALS">GOALS</TabPanel>
-          <TabPanel value="BILLS">BILLS</TabPanel>
+          <TabPanel value="ANALYSIS">ANALYSIS</TabPanel>
           <TabPanel value="TRANSACTIONS">
             <div id="transactionHistory">
               <IncomeContainer />
