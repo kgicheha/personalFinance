@@ -39,13 +39,19 @@ code {
   padding-bottom: 1em;
 }
 
+/* TOTAL INCOME  */
 #incomeSummary{
   font-weight: bold;
-  font-size: 18
-
 }
+.incomePercentChange{
+  color: #28b9b5;
+}
+/* TOTAL INCOME */
 #expenseSummary{
-  background-color: #ff5049;
+  font-weight: bold;
+}
+.expensePercentChange{
+  color: #ff5049;
 }
 .summaryAmount{
   color: white;

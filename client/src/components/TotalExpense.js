@@ -1,5 +1,4 @@
 import React from "react";
-
 import {
   Box,
   Card,
@@ -10,19 +9,19 @@ import {
 } from "@mui/material";
 import OutboundIcon from "@mui/icons-material/Outbound";
 
-const TotalIncome = () => {
+const TotalExpense = () => {
   return (
     <div>
       <Card sx={{ maxWidth: 275, minHeight: 175, maxHeight: 175 }}>
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-            TOTAL INCOME
+            TOTAL EXPENSE
           </Typography>
-          <Typography sx={{ fontSize: 16 }} id="incomeSummary">
-            + 5,000.00
+          <Typography sx={{ fontSize: 16 }} id="expenseSummary">
+          - 3000.00
           </Typography>
-          <Typography className="incomePercentChange" >
-          <OutboundIcon />
+          <Typography className="expensePercentChange">
+            <OutboundIcon />
             +15.00 %
           </Typography>
         </CardContent>
@@ -30,4 +29,5 @@ const TotalIncome = () => {
     </div>
   );
 };
-export default TotalIncome;
+
+export default TotalExpense;
