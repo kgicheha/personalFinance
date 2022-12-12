@@ -7,7 +7,7 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import OutboundIcon from "@mui/icons-material/Outbound";
+import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 
 const TotalExpense = () => {
   return (
@@ -21,7 +21,7 @@ const TotalExpense = () => {
           - 3000.00
           </Typography>
           <Typography className="expensePercentChange">
-            <OutboundIcon />
+            <TrendingDownIcon />
             +15.00 %
           </Typography>
         </CardContent>

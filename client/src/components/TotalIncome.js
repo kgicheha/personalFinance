@@ -8,7 +8,7 @@ import {
   Button,
   Typography,
 } from "@mui/material";
-import OutboundIcon from "@mui/icons-material/Outbound";
+import TrendingUpIcon from '@mui/icons-material/TrendingUp';
 
 const TotalIncome = () => {
   return (
@@ -22,7 +22,7 @@ const TotalIncome = () => {
             + 5,000.00
           </Typography>
           <Typography className="incomePercentChange" >
-          <OutboundIcon />
+          <TrendingUpIcon />
             +15.00 %
           </Typography>
         </CardContent>
