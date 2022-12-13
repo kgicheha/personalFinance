@@ -6,6 +6,7 @@ import BudgetSummary from "./BudgetSummary";
 import NewInputContainer from "./NewInputContainer";
 import IncomeContainer from "./IncomeContainer";
 import ExpenseContainer from "./ExpenseContainer";
+import TransactionSearch from "./TransactionSearch";
 
 const MenuBar = () => {
   const [value, setValue] = useState(0);
@@ -52,6 +53,7 @@ const MenuBar = () => {
           <TabPanel value="GOALS">GOALS</TabPanel>
           <TabPanel value="ANALYSIS">ANALYSIS</TabPanel>
           <TabPanel value="TRANSACTIONS">
+            <TransactionSearch />
             <div id="transactionHistory">
               <IncomeContainer />
               <ExpenseContainer />

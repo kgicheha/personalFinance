@@ -12,7 +12,7 @@ import TrendingDownIcon from '@mui/icons-material/TrendingDown';
 const TotalExpense = () => {
   return (
     <div>
-      <Card sx={{ maxWidth: 275, minHeight: 175, maxHeight: 175 }}>
+      <Card sx={{ maxWidth: 275, minHeight: 175, maxHeight: 175, mb: 2}}>
         <CardContent>
           <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
             TOTAL EXPENSE
